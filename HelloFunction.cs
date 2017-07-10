@@ -29,7 +29,7 @@ namespace TestFunctions
 
             return name == null
                 ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body", "application/json")
-                : req.CreateResponse(HttpStatusCode.OK, new { aa = "Hello " + name}, MediaTypeFormatter);
+                : req.CreateResponse(HttpStatusCode.OK, new { aa = "Hello " + name}, "application/json");
         }
     }
 }
